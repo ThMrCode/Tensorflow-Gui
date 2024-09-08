@@ -1,0 +1,31 @@
+Leer Notebook -> Constructores, Atributos, Metodos y Operaciones
+
+tf.Tensor
+	Inmutable, más eficiente
+tf.Variable
+	Mutable, menos eficiente
+
+Slicing
+	Devuelve un subtensor [:] -> SubTensor, [x] -> Escalar
+Constructor de Paso
+	tf.Variable(constructorConstant)
+Reshape
+	Por lo general, el único uso razonable de tf.reshape es combinar o dividir ejes adyacentes.
+	El reshape debe tener misma cantidad de elementos que el shape original.
+Cast
+	Convertir un tipo de dato a otro (correctamente, no solo lectura de bytes sino reinterpretacion)
+Radiodifusión (Broadcasting)
+	No se materializa, es solo conceptual, tf se encarga de optimizarla, tf.broadcast_to si lo materializa
+	Los Ejes unitarios del tensor se estiran para cuadrad las dimensiones
+	Init Shape -> 		A (1,4,1) B (5,1,9)
+	Radiodifusion Shape ->	A (5,4,9) B (5,4,9)
+	Siempre se estiran de manera que el de menor orden complemente al mayor
+	Init Shape -> 		A (3,4)   		B (1,1,3,1,2,1,4)
+	Radiodifusion Shape ->  A (1,1,3,1,2,3,4) 	B (1,1,3,1,2,3,4)
+								    [^^^] A Inicial, Menor Orden
+KerasVariable
+	Clase hija de Tf.Variable, con unas cuantas funciones adicionales, intercambiable y operable con tf.Variable en 	su mayoria
+
+*Leer Notas a Memoria en tfGeneral
+
+

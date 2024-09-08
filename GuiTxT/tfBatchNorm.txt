@@ -1,0 +1,8 @@
+La normalizacion por lotes es especial, no se puede normalizar el caso de entrada con respecto a caso de entrada mismo, sino su comparacion con los otros
+
+Normalizacion de Datos de entrada (Connvolucionales)
+
+	batch_size height width channels
+	Normalizar axis channels, un mismo canal "c" se le saca la media y std a todo el (batch_size, height width, "c")
+	Se actualiza el canal c, (batch_size, height width, "c") normalizandolo respecto a esa media y std
+	Como es normalizacion de la entrada, seria mejor usar batch_size = Toda la entrada para que la normalizacion use 	todo el conjunto conocido

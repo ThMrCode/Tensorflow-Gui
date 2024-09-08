@@ -1,0 +1,19 @@
+List Device
+	tf.config.experimental.list_physical_devices('GPU')
+Dinamic Memory
+	tf.config.experimental.set_memory_growth(gpu,True)
+Set Device
+	tf.device(name)
+
+Memoria
+	Tensorflow unicamente tiene accesso a 2.8 gb (aprox 600 millones de floats) en mi gpu, 	supongo que el 	resto es 	para memoria temporal.
+
+	Tensorflow no libera directamente la memoria de la gpu pero al hacer del tensor, deja de tener separada esta 	memoria, la puede sobreescribir, es como si no estuviera. 
+
+	TensorFlow usa el orden de memoria de "fila principal" de estilo C, donde incrementar el índice más a la derecha 	corresponde a un solo paso en la memoria -> NCHW
+
+USAR GOOGLE COLAB ES RAPIDISIMO
+https://colab.research.google.com/notebooks/gpu.ipynb#scrollTo=Y04m-jvKRDsJ	GPU
+https://colab.research.google.com/notebooks/tpu.ipynb#scrollTo=kvPXiovhi3ZZ	TPU
+
+La api de backend c++ es TensorFlow Core API (similar a cudnn)

@@ -1,0 +1,4 @@
+Al importar tensorflow suele dar advertencias en rojo sobre la presicion numerica, etc
+
+Por la advertencia de NUMA Parece que no esta leyendo el modulo NUMA de tensorflow, verificar ello
+

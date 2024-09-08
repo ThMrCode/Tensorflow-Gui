@@ -1,0 +1,4 @@
+Los cvs son texto plano separados por un delimitador, usualmente son float32, flatten, para darle forma usar reshape
+Estructura
+Example			Example			Example
+Y	X		Y	X		Y	X		
